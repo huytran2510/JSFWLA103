@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/viewContent.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="viewContent">
+    <h1>View Content</h1>
+    <hr>
+    <div class="viewContent" >
+        <h3 class="viewBox">View Content List</h3>
+        <table>
+            <tr style="font-weight: bold;">
+                <td>#</td>
+                <td>Title</td>
+                <td>Brief</td>
+                <td>Created Date</td>
+            </tr>
+            <tbody>
+            <tr th:each="content, iterStat : ${contents}" class="post-row">
+                <td th:text="${iterStat.index + 1}"></td>
+                <td th:text="${content.title}"></td>
+                <td th:text="${content.brief}"></td>
+                <td th:text="${content.createDate}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--<script th:inline="javascript">-->
+<!--    $(document).ready(function () {-->
+<!--        var rowNumber = 1;-->
+<!--        $(".post-row").each(function () {-->
+<!--            $(this).find("td:first-child").text(rowNumber);-->
+<!--            rowNumber++;-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+</body>
+</html>

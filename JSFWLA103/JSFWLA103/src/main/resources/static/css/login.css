@@ -1,0 +1,65 @@
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    border: 2px solid #7f7f7f;
+    border-radius: 3px;
+    margin-top: 200px;
+    width: 300px;
+    height: 305.5px;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    width: 90%;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.input-container input {
+    margin: 0;
+}
+
+#username,
+#password {
+    margin: 0;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 300px;
+}
+#submit {
+    width: 270px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #00ce81;
+    border: #00ce81;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#submit:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.forgot-password {
+    margin-top: 20px;
+    background-color: #ecf0f1;
+    height: 41.5px;
+    width: 300px;
+}
+a {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #b0bcbc;
+}

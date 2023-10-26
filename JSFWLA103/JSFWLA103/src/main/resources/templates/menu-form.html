@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/menu.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{/css/update.css}" type="text/css" rel="stylesheet">
+    <link th:href="@{/css/viewContent.css}" type="text/css" rel="stylesheet">
+    <link href="/static/css/menu.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <h1>CMS</h1>
+    <div class="tag-a-header">
+        <div style="display: flex; align-items: center; width: 40px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-person-fill"
+                 viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 20" id="triangle">
+                <path d="M5 6h10l-5 9-5-9z"></path>
+            </svg>
+        </div>
+        <div class="info-box">
+            <div class="userInfo">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#191a21"
+                         class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                    </svg>
+                    User Profile
+                </a>
+            </div>
+            <hr style="width: 100px;">
+            <div>
+                <a href="/logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#191a21"
+                         class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                        <path fill-rule="evenodd"
+                              d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="background-color: #f8f8f8">
+    <div class="container-action">
+        <div class="search-container">
+            <input class="search" type="text" placeholder="Search...">
+            <span class="search-icon">&#128269;</span>
+        </div>
+        <div class="view">
+            <a style="color: #75a0cf;" ;>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table"
+                     viewBox="0 0 16 16">
+                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+                </svg>
+                &ensp;View Contents
+            </a>
+        </div>
+        <div class="form">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 30" id="form">
+                <g data-name="Layer 2">
+                    <path fill="#75a0cf"
+                          d="M23 13V5a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-7a2 2 0 0 0-2 2v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v10a2 2 0 0 0 2-2Z"></path>
+                    <path fill="#75a0cf"
+                          d="M18 7H8a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2zm1 5a1 1 0 0 0-1-1H8a1 1 0 0 0 0 2h10a1 1 0 0 0 1-1zM8 15a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2z"></path>
+                    <path fill="#75a0cf"
+                          d="M14.414 26a1 1 0 0 1-.978-1.206l.752-3.581a1 1 0 0 1 .271-.5l9.42-9.419a3.073 3.073 0 0 1 4.243 0 3 3 0 0 1 0 4.243L18.7 24.954a.993.993 0 0 1-.5.272l-3.581.753a1.036 1.036 0 0 1-.205.021ZM18 24.247Zm-1.911-2.331-.376 1.79 1.787-.376 9.208-9.209a1 1 0 0 0 0-1.414 1.021 1.021 0 0 0-1.414 0Z"></path>
+                </g>
+            </svg>
+            &ensp;
+            Form Content
+        </div>
+    </div>
+    <div >
+        <div id="editProfile" th:insert="update-profile :: editProfile"  style=" display: none"></div>
+        <div id="viewContent" th:insert="view-content :: viewContent"  style=" display: none"></div>
+        <div id="addContent" th:insert="add-content :: addContent"  style=" display: none"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        $(".userInfo").click(function (event) {
+            event.preventDefault();
+            $("#addContent").hide();
+            $("#viewContent").hide();
+            $("#editProfile").show();
+        });
+        $(".view").click(function (event) {
+            event.preventDefault();
+            $("#editProfile").hide();
+            $("#addContent").hide();
+            $("#viewContent").show();
+        });
+        $(".form").click(function (event) {
+            event.preventDefault();
+            $("#viewContent").hide();
+            $("#editProfile").hide();
+            $("#addContent").show();
+
+        });
+    });
+</script>
+</body>
+</html>

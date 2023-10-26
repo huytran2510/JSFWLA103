@@ -1,0 +1,105 @@
+.form,
+.view,
+.content {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+    width: 200px;
+    color: #75a0cf;
+}
+.form:hover,
+.content:hover,
+.view:hover {
+    background-color: #eeeeee; /* Màu viền khi hover vào */
+    cursor: pointer; /* Đổi con trỏ chuột thành dấu nhấp chuột */
+    border: 1px solid #d6d3d3;
+}
+.view {
+    margin-bottom: -5px; /* Khoảng cách âm bên phải */
+}
+
+.form {
+    margin-top: 3px; /* Khoảng cách âm bên trái */
+}
+.icon {
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và văn bản */
+    margin-top: 5px;
+}
+a {
+    text-decoration: none;
+    flex-direction: column;
+    color: black;
+}
+.container {
+    width: 233px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.search {
+    border-top: 2px solid #d6d3d3;
+    border-right: 0px solid #d6d3d3;
+    border-bottom: 2px solid #d6d3d3;
+    border-left: 2px solid #d6d3d3;
+    width: 150px;
+    font-size: 16px;
+    height: 25px;
+    margin-left: 20px;
+}
+.search-icon {
+    font-size: 15px;
+    height: 26.5px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #d6d3d3;
+}
+.header {
+    display: flex;
+    border: 1px solid transparent;
+    background-color: #f8f8f8;
+    height: 60px;
+    align-items: center;
+}
+.tag-a-header {
+    margin-left: 1000px;
+}
+.tag-a-header {
+    position: relative;
+    display: inline-block;
+}
+
+.tag-a-header .info-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    left: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.tag-a-header:hover .info-box {
+    display: block;
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.tag-a-header:hover {
+    border: 2px solid #cecdcd;
+    background-color:#cecdcd ;
+}
+
+hr {
+    width: 100%;
+    border-color: #f6f6f6;
+}

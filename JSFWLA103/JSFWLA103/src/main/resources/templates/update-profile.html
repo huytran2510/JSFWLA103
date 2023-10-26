@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/update.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div th:fragment="editProfile">
+    <h1>Edit Profile</h1>
+    <hr>
+    <div class="container-form">
+        <h3>Profile Form Element</h3>
+        <form th:action="@{/member/update}" th:object="${member}" method="POST">
+            <h2>First Name</h2>
+            <input class="input" type="text" name="firstname" th:field="*{firstname}" placeholder="First Name">
+
+            <h2>Last Name</h2>
+            <input class="input" type="text" name="lastname" th:field="*{lastname}" placeholder="Last Name">
+
+            <h2>Email</h2>
+<!--            <span th:text="${email}"></span>-->
+
+            <h2>Phone Number</h2>
+            <input class="input" type="text" name="phone" th:field="*{phone}" placeholder="Phone Number">
+
+            <h2>Phone Description</h2>
+            <textarea class="input" type="text" name="description" th:field="*{description}"
+                      placeholder="Description"></textarea>
+
+            <div class="btn-action">
+                <button type="submit" style="height: 30px;">
+                    Submit Button
+                </button>
+
+                <button id="reset" type="reset" style="height: 30px;">
+                    Reset Button
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script th:inline="javascript">
+    function resetForm() {
+        document.getElementById("reset").reset();
+    }
+</script>
+</body>
+</html>

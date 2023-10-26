@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="addContent">
+    <h1>Edit Profile</h1>
+    <hr>
+    <div class="container-form">
+        <h3>Profile Form Element</h3>
+        <form th:action="@{/member/add}" th:object="${content}" method="POST">
+            <h2>Title</h2>
+            <input class="inputAdd" type="text" name="title" th:field="*{title}" placeholder="Enter the title">
+
+            <h2>Brief</h2>
+            <textarea class="inputAdd" type="text" name="brief" th:field="*{brief}" ></textarea>
+
+            <h2>Content</h2>
+            <textarea class="inputAdd" type="text" name="content" th:field="*{content}" ></textarea>
+
+            <div class="btn-action">
+                <button type="submit" style="height: 30px;">
+                    Submit Button
+                </button>
+
+                <button type="reset" style="height: 30px;">
+                    Reset Button
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
